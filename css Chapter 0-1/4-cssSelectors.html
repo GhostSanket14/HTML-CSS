@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selector page</section></title>
+
+    <!-- Below h1 & div Css are applied to all h1 and Css tags. You can add ID or Class to these h1 or Div 
+    try to use class more and use ID only if necessary -->
+    <style>
+        h1{
+            color: blue;
+            background-color: black;
+        }
+        div{
+            color:brown;
+            background-color: antiquewhite;
+        }
+        .np, h3{
+            color:aqua;
+            background-color:cornflowerblue;  
+        }
+        h1.red{
+            color: rgb(244, 0, 0);
+        }
+        /* '*' is basically apply to all TAGS */
+        *{ 
+            padding: 0%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>
+        This is H1 tag
+    </h1>
+    <div>
+        THis is Div tag
+    </div>
+    <div class="np">
+        THis is Div tag with class=np
+    </div>
+    <p class="np">
+        This is p tag with class=np
+    </p>
+
+    <h3>
+        We can make multiple classes have same css rules like this .np, h3{ ...... } 
+    </h3>
+
+    <h1 class="red">
+        This is H1 tag with class red ie. h1.red <!-- This way we can use combo of Tag name & class/ID name (Mostly use for class) -->
+    </h1>
+
+</body>
+</html>
