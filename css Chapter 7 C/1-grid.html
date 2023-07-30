@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            display: grid; /* This is how we make a layout grid */
+            background-color: yellow;
+
+            grid-row-gap: 9px; /* Control gap between rows of item */
+            grid-column-gap: 5px; /* Control gap between column of item */
+            
+            /* Below is short form of above 2,   grid-gap: row column; ( If we put only 1 value it will be applied to both ) */
+            grid-gap: 9px 5px;
+
+            grid-template-columns: auto auto; /* To arrange the items in columns, No. times we write auto is the number of columns created 
+            [1] we can also specify size ourself too, grid-template-columns: 10px 20px etc... ;
+            */
+
+        }
+        .item{
+            background-color: antiquewhite;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+    </div>
+</body>
+</html>
