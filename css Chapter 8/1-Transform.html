@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <style>
+        /* NOTE- These Transforms are used only in Graphics, Animation heavy websites. So dont worry too much about them. Rarely used
+        The transform CSS property lets you rotate, scale, skew, or translate an element. */
+        .container{
+            background-color: antiquewhite;
+            height: 500px;
+        }
+        .box{
+            border: 1px solid black;
+            transform: translate(20px, 15px); /* we move in X and Y axis Resp. move individual axis by using translateX(); or translateY() 
+            */
+            transform: rotate(1turn); /* To roate a element, This one override the above transform */
+            transform-origin: 20px 20px; /* transform-origin, is used to specify from which part of element transform will initiate. Start-mind-end. of element etc. We can also use X and Y values to specify exact point of transform. (MDN ref)
+            */
+            /* NOTE- we can combine multiple like this "transform: rotate(0.49turn) translate(20px, 15px);"         Also transform overrides. So to add multiple properties seperate using space like above*/
+        }
+        .box1{
+            border: 2px solid red;
+            transform: scaleX(5); /* TO scale in X axis, Original*value */
+            transform: scaleY(1); /* TO scale in Y axis, Original*value */
+            /* transform: scale(); Combo of above two */
+        }
+        .box2{
+            border: 3px solid green;
+            transform-origin: 20px 20px;
+            transform: skew(20deg, 30deg); /* We mostly use this to skew elemnt in 2 axis. Use MDN for visual demo. Mostly we use this for Image or anything graphics related to manipulate it */
+
+            transform: matrix(); /* Basically we combine, matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) 
+            */
+        }
+
+        /* 3D transform methods. (most powerful for animation)
+        [1] rotateX
+        [2] rotateY
+        [3] rotateZ
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis velit aliquid suscipit. Soluta dolor aliquam fuga minima sit inventore omnis dolore, officia nulla recusandae natus quod fugit corrupti quasi nemo aperiam voluptates asperiores veniam!
+        </div>
+        <div class="box1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis velit aliquid suscipit. Soluta dolor aliquam fuga minima sit inventore omnis dolore, officia nulla
+            </div>
+        <div class="box2">
+            Lorem ipsum, dolor
+        </div>
+    </div>
+</body>
+</html>

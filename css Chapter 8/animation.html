@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation file</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: aqua;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            animation-name: manipulateWidth; /* This way we can apply a animation to a element */
+            animation-duration: 3s; /* how long a animation will run */
+            animation-delay: 1s; /* time before animation will start */
+            animation-iteration-count: 3; /* How many times animation will run */
+            animation-direction: reverse; /* Many directions we can make our animation go, very useful */
+            /* There are few more (u can see below)), but these are Basic. */
+            /* animation:  name duration timing-function delay iteration-count direction fill-mode; <- we can combine all properties in once line too */
+        }
+
+        @keyframes manipulateWidth{ /* This is how we make animations */
+            from{
+                width: 300px; /* This is initial width value from above */
+            }
+            to{
+                width: 600px; /* This is the width we want to reach */
+            }
+        }
+        .container img{
+            width: 300px;
+            border: 5px solid black;
+            animation-name: manipulateWidth;
+            animation-duration: 3s; 
+            animation-delay: 1s;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+        }
+
+        @keyframes imageWithPercentage { /* We can decide what happend at what percent of animation completion */
+            0%{
+                width: 300px;
+            }    
+            50%{
+                width: 600px;
+            }
+            80%{
+                width: 900px;
+            }
+            100%{
+                width: 1000px;
+            }
+        }
+        .container .img2{
+            width: 300px;
+            border: 5px solid black;
+            animation-name: imageWithPercentage;
+            animation-duration: 5s; 
+            animation-delay: 1s;
+            animation-iteration-count: 3;
+            animation-direction: normal;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        This is container
+        <div class="box">
+            This is box
+        </div>
+        <img src="gordon.jpeg" alt="This is the Freeman">
+
+        <img class="img2" src="gordon.jpeg" alt="This is the Freeman">
+    </div>
+</body>
+</html>

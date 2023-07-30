@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <!-- Used to change property values slowly over a dduration -->
+    <style>
+        .container{
+            background-color: antiquewhite;
+            height: 500px;
+        }
+        img{
+         width: 600px; /* This is initial state (This must be set). Transition will move from this to size of hover event below */
+         transition-property: width; /* First we select which property will be affected by transition */
+         transition-duration: 5s; /* Duration of going from initial to final stage */
+         transition-timing-function: ease-in; /* Basically great animation, various on MDN */  
+
+         /* [1] transition: property duration time-function delay; (we can skip delay)
+          we can do all above combined 
+
+            [2] transition: property duration time-function delay;
+         we can add multiple poperties like this (just seperate using comma).
+         */
+        }
+        img:hover{ /* To trigger a event when mouse will hover over (image) tag */
+            width: 100px; /* This is Final size */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <img src="https://source.unsplash.com/random/600×600/?fruit" alt="Yo man">
+        </div>
+    </div>
+    
+</body>
+</html>
