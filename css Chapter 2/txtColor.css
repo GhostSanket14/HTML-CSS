@@ -1,0 +1,9 @@
+.paraTxtClr{
+    color: rgb(10,20,65); /* This is RGB method */
+    background-color: antiquewhite; /* This is normal method */
+    height: 150px;
+}
+.h1TagColor{
+    color: #ed2e11; /* This is hex */
+    background-color: #0fbfff;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mc-C,BS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .margin1{
+            background-color: antiquewhite;
+            height: 200px;
+            width: 200px;
+            margin: 30px;
+        }
+        .margin2{
+            background-color: aqua;
+            height: 400px;
+            width: 200px;
+            margin: 40px; 
+            border: 6px solid black;
+            
+        }
+        .boxSizing{
+            background-color: blueviolet;
+            width: 100%;       
+            border: 4px solid red;
+            box-sizing: border-box; /* sets how the total width and height of an element is calculated.
+            border-box means we are including the padding and border of host into width of child  (remove margin from chind for this to work)
+            
+            content-box is default.
+            */
+        }
+    </style>
+</head>
+<body>    
+    <div class="margin1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi, eum error soluta iste perspiciatis maiores nesciunt perferendis, numquam eius accusantium suscipit, at a explicabo corrupti. Fugit libero, assumenda a neque molestiae dolore ab.
+    </div>
+    <div class="margin2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi, eum error soluta iste perspiciatis maiores nesciunt perferendis, numquam eius accusantium suscipit, at a explicabo corrupti. Fugit libero, assumenda a neque molestiae dolore ab.
+        <div class="boxSizing">
+            box-sizing testing
+        </div>
+    </div>
+
+<!-- Margin collapse means that when two margins overlap then
+[1] If both have equal margin then they share it.
+[2] If one margin is bigger then other then bigger will be considered. and smaller margin have to share that big margin.
+
+just inpect this page and move mouse over the div tags. U will see the color change.
+-->
+
+
+</body>
+</html>

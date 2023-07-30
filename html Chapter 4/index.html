@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Lists are used to represent content in list -->
+    <!-- 'UL' means unorderes list, 'ol' means ordered list and 'li' means list item -->
+    <ul> <!-- Here we can use type="circle" but it can cause issue try to do all design work in CSS.-->
+        <li>Home</li>
+        <li>Contact</li>
+        <li>Help</li>
+    </ul>
+    <ol>
+        <li>AA</li>
+        <li>BB</li>
+        <li>CC</li>
+    </ol>
+    <!-- Basically 'ul' have bullets and 'ol' have numbering-->
+    <div>
+        
+        <table>
+            <caption>Student data</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th colspan="2">ID</th>
+                    <!-- we put heading in thead and rest body in tbody, this helps to deal with multiple tables. 
+                    colspan helps to merge columns under single heading. -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>sanket</td>
+                    <td>22</td>
+                    <td>001</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <form action=""> <!--Here action is where the backend is and where data is processed-->
+            <input type="text" placeholder="Enter name">
+            <input type="text" placeholder="Enter Age">
+            <input type="text" placeholder="Enter ID">
+            <label for="yaya">Here is yaya from below</label>
+            <input type="text" name="haihai" id="yaya">
+            <!-- ID is unique and there are many more input types avaliable -->
+            <!-- If multuiple radio buttons have same name we can only select any one them, also while using radio button 'for' in label
+                 and 'id' in input should match, 
+                
+                we wrap radio button and checkbox in label as by using the id we can also select the checkbox/radio button even by clicking the 
+                label-->
+
+                <textarea name="Tell me why" id="" cols="30" rows="10" placeholder="Enter name"></textarea>
+                <select name="car" id="a">
+                    <option value="A">a</option>
+                    <option value="B">b</option>
+                    <option value="C">c</option>
+                </select>
+
+                <!-- We can use 'iframe tag' to embed Youtube videos. 
+                    Or  we can also embed custom videos as well using 'video' tag.
+                    below controls adds video play/pause etc features.
+                    -->
+                    <video src="abc.mp4" controls></video>
+        </form>
+    </div>
+</body>
+</html>

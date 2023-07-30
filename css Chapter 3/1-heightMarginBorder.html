@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>height and Width</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .testingHeight{
+            background-color: aqua;
+            height: 220px; /* When it comes to browser. Total height will be margin_top+margin_bottom+padding_top+paddin_bottom+height 
+                SS_CCS1 <- check this Screen Shot */
+            width: 320px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .testingPaddingMargin{
+            background-color: bisque;
+            height: 200px;
+            width: 200px;
+
+            margin: 2px 3px 4px 6px; /* To set custom margin- top, right, bottom, left (clockwise)  
+                If we put only 2 value then first value will be given to Top-Bottom and second value will be given to left-right
+
+                we can also do margin-top:_px; etc. but top is more easy
+            */
+            padding: 2px 3px 4px 8px; /* Same thing can be done with padding. */
+
+            
+        }
+
+        .borderTest{
+            height: 200px;
+            width: 300px;
+            border: 2px solid Red; /* border: width Style Color  (There are lot of good Border styles, explore them when using border)
+                we can also do individual it. border-width, border-style etc. (to set multiple border styles use border-style sperately
+                as above 'border' cant seem to do it)
+           
+                [1] border-style: dashed dotted;  => To set custom/multiple border style, as 'border' cant do it - top, right, bottom, left (clockwise)  
+                If we put only 2 value then first value will be given to Top-Bottom and second value will be given to left-right
+                */
+            border-radius: 10px; /* This gives us rounded edges */
+            
+        }
+    </style>
+</head>
+<body>
+        <div class="testingHeight">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident error nobis ad modi veritatis corrupti vel sint repellendus, totam cupiditate, enim repellat a reprehenderit commodi aliquam optio laboriosam voluptas dolor tempore? Velit, qui?
+        </div>
+        <div class="testingPaddingMargin">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident error nobis ad modi veritatis corrupti vel sint repellendus, totam cupiditate, enim repellat a reprehenderit commodi aliquam optio laboriosam voluptas dolor tempore? Velit, qui?
+        </div>
+        <div class="borderTest">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident error nobis ad modi veritatis corrupti vel sint repellendus, totam cupiditate, enim repellat a reprehenderit commodi aliquam optio laboriosam voluptas dolor tempore? Velit, qui?
+        </div>
+</body>
+</html>

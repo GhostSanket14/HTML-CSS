@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG- Image</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .myImage{
+            width: 350px;
+            height: 350px;
+            border: 2px solid black;
+            background-image: url("gordon.jpeg"); /* These will put a image that will repeat in x and y axis */
+            background-repeat: no-repeat; /* Using this we can control the repeat pattern
+                [1] repeat-y, repeat in y axis
+                [2] repeat-x, repeat in x axis 
+                [3] no-repeat, no repeat
+                [4] space
+                [5] circle */
+            
+            background-size: 350px 350px; /* Used to set size of elements background image.
+                [1] contain, Scales the image as large as possible within container without cropping/stretching the image. (ie. maintain aspect ratio)
+                [2] cover, It covers the container while maintaining the aspect ratio. Which means some part of image will be lost if container aspect raio is different then image aspect ratio.
+                [3] auto, as the name says.
+                [4] ___px, give width in pixel and height will be set automatically.
+                [5] ___px ____px, to give both width and height. But this one damages the aspect ratio.
+            
+            */
+
+            background-position: left; /* This is used to set position of the image in the container 
+                [1] (left, right, top, bottom, center), we can mix and match 2 or use individual  Eg. top left
+                [2] __% __%, we can also use percentage of axis
+
+            
+            */
+}
+
+    .newProp{
+            width: 200px;
+            height: 1150px;
+            border: 2px solid black;
+            background-image: url("scrol.jpeg");
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* whether a background image's position is fixed within the viewport, or scrolls
+                [1] scroll, txt will scroll but image wont.
+                [2] local, both txt and image will scroll.
+                [3] fixed,             
+            */
+    }
+
+    .allinOne{
+        background: red url("gordon.jpeg") no-repeat fixed; /* We also use this peoperty which is all in one combined
+            background: color image repeat attachment position; <- this is the format for this.
+                you dont have to put all properties. You can put only one u want and it will still work. But maintain the order.
+        */
+    }
+
+    </style>
+</head>
+<body>
+    <div class="myImage">
+
+    </div>
+
+    <div class="newProp">
+    The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element. (This is not compatible with background-clip: text.)
+    The background is fixed relative to the element's contents. If the element has a scrolling mechanism, the background scrolls with the element's contents, and the background painting area and background positioning area are relative to the scrollable area of the element rather than to the border framing them.
+    </div>
+
+
+</body>
+</html>
