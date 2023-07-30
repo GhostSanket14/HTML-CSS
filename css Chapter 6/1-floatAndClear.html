@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        .box1{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            float: right; /*     It just flows the element to left or right, it is also one of ways to put Div side-by-side  
+                But this is confusing to use so this is largely replaced by Flexbox
+            */
+        }
+        .box2{
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            float: right;
+            clear: right; /* This basically means nothing will float to left of box2 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="box1">
+Box 1
+</div>
+<div class="box2">
+Box 2
+</div>
+
+</body>
+</html>

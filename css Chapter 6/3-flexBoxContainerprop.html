@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox properties of CONTAINER</title>
+    <!-- FlexBox properties of CONTAINER, then work on container or elements inside the container -->
+    <style>
+        .container{
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: row-reverse;
+        
+            flex-wrap: wrap; /* In 'wrap' the elements maintain the space given to them, and adjust as per screen size changes 
+                wrap, no-wrap, wrap-reverse
+            */
+            justify-content: center; /* Defines alignment along main-axis (Look at Screenshot SS CSS flex-alignments)
+            [!] start;   end;   flex-start;    flex-end;    left;   right; (mostly we use center)
+            */
+             
+            align-items: center; /* Defines alignment along cross-axis (Look at Screenshot SS CSS flex-alignments)
+            [!] stretch; start; end; (There are more but these are common) In this case too mostly center is used.
+            */
+            align-content: center; /* IMP, align-items and flex-wrap when adjusting create space sometimes. So if u dont want space use align-content, as it treats the content as one entity 
+            */
+            height: 50vh;
+        }
+        .box1{
+            background-color: red;
+            height: 250px;
+            width: 200px;
+            border: 2px solid black;
+        }
+        .box2{
+            background-color: blue;
+            height: 250px;
+            width: 200px;
+            border: 2px solid black;
+        }
+        .box3{
+            background-color: yellow;
+            height: 250px;
+            width: 200px;
+            border: 2px solid black;
+        }
+        .box4{
+            background-color: green;
+            height: 250px;
+            width: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Flexbox aims to provide a better way to align, layout, items in container 
+    Some properties are put in Container and some properties are put in elements directly -->
+    
+    <div class="container">
+    <div class="box1">
+        Div box 1
+    </div>
+    <div class="box2">
+        Div box 2
+    </div>
+    <div class="box3">
+        Div box 3
+    </div>
+    <div class="box4">
+        Div box 4
+    </div>
+    </div>
+
+</body>
+</html>

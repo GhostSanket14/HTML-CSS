@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forn Prop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- These 3 lines are link for GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    <style>
+        .fontTest1{
+            height: 200px;
+            color: darkorange;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif; /* If 'Times New Roman' fails to load  'Times' will be used if this fails too 'serif' will be used, this is called fallback system
+            Rule-   font-family: 'Times New Roman', Times, serif; <- Here 'Times New Roman' have single quotes because it has space in name 
+            
+            NOTE- There are web safe fonts, which means fonts that are pre-installed in all wed apps. Making them 100% sure to load in.
+            */
+        }
+
+        .googleFonts{
+            height: 300px;
+            color: chartreuse;
+            font-size: 30px;
+            font-family: 'Caprasimo', cursive; /* Took this line from google, above links are from same place */
+            font-style: italic; /* TO choose the style of the font 
+            normal; italic; oblique; 
+            oblique 10deg; <- we can choose degree. If no degree is chosen it becomes 14 by default
+            */
+            font-weight: 900; /* This determine thickness of font */
+            /* font-variant: ;  Advance stuff do when going to advance level */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="fontTest1">
+        This is Font size test and font family
+    </div>
+
+    <div class="googleFonts">
+        This is where i will use Google fonts
+    </div>
+</body>
+</html>

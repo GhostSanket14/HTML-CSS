@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS font size type</title>
+    <style>
+        html{
+            font-size: 5px;
+        }
+        .parentFont{
+            font-size: 15px; /* UNIT 1, px (pixels) */
+        }
+        .divChildFont{
+            font-size: 2em; /* UNIT 2, 2em=2*parent element size */
+        }
+        .pChildFont{
+            font-size: 2rem; /* UNIT 3, 2rem=2*HTML parent element size (Here HTML size is taken as parent size) 
+            we use em or rem in case we want to resize huge part of the page, relative to something.
+            
+            */
+        }
+
+        /* Unit 4, We can also use % it is unit related to pare element. */
+
+    </style>
+</head>
+<body>
+    <!-- There are more than one unit for size than px (pixels), (read harrys notes on this) -->
+
+    <div class="parentFont">
+        This is the Parent DIV with Child DIV and Subchild P (font-size: 15px)
+        <div class="divChildFont">
+            This is the Parent DIV with Child P (font-size: 2em Ie. 15*2)
+        </div>
+    </div>
+    <p class="pChildFont">
+        This is 'rem' and my parent is HTML as font size
+    </p>
+
+</body>
+</html>

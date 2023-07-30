@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS size type</title>
+    <style>
+    /* View port basically means part of page that is avaliable for viewing  */
+        .parentFont{
+            background-color: antiquewhite;
+            width: 50vw; /* vw, take 100% of viewport width */
+            height: 50vh; /* vh, take 50% of viewport height */
+        }
+        .divChildFont{
+            background-color: darkkhaki;
+            height: 20vw;
+            width: 20vw;
+        }
+        .pChildFont{
+            background-color: cadetblue;
+            height: 20vw;
+            width: 20vw;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parentFont">
+        This is the Parent DIV with Child DIV and Subchild P
+
+        <div class="divChildFont">
+            This is the Parent DIV with Child P
+        </div>
+        <p class="pChildFont">
+            This is p with parent div
+        </p>
+
+    </div>
+
+
+</body>
+</html>

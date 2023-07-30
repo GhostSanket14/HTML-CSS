@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Align</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .alignMyTxt{
+            height: 60px;
+            background-color: antiquewhite;
+            color: blue;
+            text-align: center; /* We can use this to move/align the text, Note- it dont move the block elements it only moves the text within the block element space.
+            [!] start end left right center justify justify-all match-parent, so use them as u go along the way.
+            */
+        }
+        .decorateMytext{
+            height: 40px;
+            color: brown;
+
+            text-decoration: underline solid black; /* We use this to decorate the text, (they are lot of values avaliable on MDN)
+                text-decoration: Line Style Color;  <- we can add 3 properties at once as-> text-decoration = 
+                                                                                            <'text-decoration-line'>
+                                                                                            <'text-decoration-style'>
+                                                                                            <'text-decoration-color'> 
+
+                Be careful while using this property and it is related to UIUX concept of how human percieve text decorations.
+            */
+        }
+
+        .txtTransform{
+            height: 360px;
+            width: 250px;
+            color: chocolate;
+
+            text-transform: uppercase; /* We can use this to transform the text in various ways 
+                [!] lowercase; capitalize; none; etc.
+            */
+            line-height: 9.5px; /* It manupulates the height distance between lines */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="alignMyTxt">
+        Hi this is DIV with text align
+    </div>
+
+    <div class="decorateMytext">
+        Hi this is DIV with text decorate
+    </div>
+
+    <div class="txtTransform">
+        Hi this is DIV with text transform
+        and this is DIV with line-height as well
+    </div>
+</body>
+</html>

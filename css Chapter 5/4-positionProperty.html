@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{ /* li are tags not class so no .li  (but while making projects use class mostly) */
+            display: inline;
+            margin: 5px 3px;
+        }
+        header{
+            background-color: bisque;
+            height: 10vh;
+            position: sticky; /* position CSS property sets how an element is positioned in a document.
+            When the element position is set to sticky it remains in the normal document flow and is positioned relative to its closest ancestor element. But once the ancestor element is scrolled and reaches the offset defined for the sticky element it becomes fixed and stays that way until the ancestor is scrolled off the viewport. 
+            NOTE= USE Static mostly, sticky may not work in old browser */
+            top: 0;
+
+            z-index: 1; /* Which element will be on top of which element it will be decided by this prop.  */
+        }
+        .mainStuff{
+            background-color: aqua;
+            height: 1500px;
+            width: 30vw;
+            margin: auto;
+            position: relative; /* Making this relative ie. Non-static. So 'box' element from below will now be next to this element(As this is closest parent/element) and will also move only within this element using left, etc*/
+        }
+        p{
+            text-align: center;
+        }
+        .box{
+            background-color: blueviolet;
+            border: 2px solid black;
+            width: 200px;
+            height: 20px;
+            top: 0;
+            left:  0; /* <percentage>s of the height of the containing block */
+            position: absolute; /* [1] Static is default and it also means top, bottom, left and right has no effect on the element
+            [2] relative, means now the property of top, bottom, left and right will start working.
+            [3] absolute, means that it will be removed from the document load flow. Basically other elements will load as if this element dont exist. But this element does exist and will load next to its first non-static member (parent-child tree) (it may load on top of a element). So we have to move it using top, bottom, left and right to position it where ever we want.
+            */
+        }
+        .box2{
+            background-color: rgb(226, 196, 255);
+            border: 2px solid rgb(253, 0, 0);
+            width: 200px;
+            height: 20px;
+
+            top: 50px; /* As this is static element ans this follow Doc flow. Ans top, etc will have no effect on it */
+            left: 255px;
+        }
+        .box3{
+            background-color: pink;
+            border: 2px solid black;
+            width: 300px;
+            height: 40px;
+            top: 50px;
+            left: 255px;
+            position: fixed; /* No matter how much u scroll. This element will stay on the screen (positioning is as per browser window)
+                letf, etc will work            
+            */ 
+            z-index: 2; /* Bigger z-index means element will be on top of element with lower z-index */
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li><li>About</li><li>Help</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="mainStuff">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequuntur quaerat inventore, aspernatur expedita deleniti debitis labore obcaecati eos nobis.
+
+            <div class="box">
+                Hi I am BOX
+            </div>
+            <div class="box2">
+                Hi I am BOX2
+            </div>
+            <div class="box3">
+                Hi I am BOX3 .
+            </div>
+        </p>
+    </div>
+
+
+</body>
+</html>
