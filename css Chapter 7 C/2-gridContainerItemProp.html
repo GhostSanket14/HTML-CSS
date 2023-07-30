@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid container & Item Properties</title>
+    <style>
+        .container{
+            height: 65vh;
+            display: grid;
+            background-color: yellow;
+            grid-gap: 9px 5px;
+            align-items: flex-start;
+            grid-template-columns: auto auto auto auto; /* Grid Container property 1 */
+            grid-template-rows: auto auto auto auto; /* Grid Container property 2 */
+            /* NOTE- We use justify-content and align-content here as well. To manupulate content inside container */
+        }
+        .item{
+            background-color: antiquewhite;
+            border: 1px solid black;
+            
+        }
+        .item1{
+            background-color: rgb(255, 168, 55);
+            border: 1px solid black;
+            grid-column: 1/3; /* This means this item will occupy line No.1 to No.3, 1-2 & 2-3 (Ir. Two columns)
+            This is one of powerful tool, as we can alter fist and second value. */
+            grid-row: 1/3;       
+        }
+        .item2{
+            background-color: rgb(89, 50, 0);
+            border: 1px solid black;
+            grid-row: 2/ span 2; /* We can also specifi how many rows/cols we want to span from starting line */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">item 1</div>
+        <div class="item2">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
+        <div class="item">item 8</div>
+        <div class="item">item 9</div>
+        <div class="item">item 10</div>
+
+<!-- FOR responsive use Flex-box as it is easy over Grid -->
+
+    </div>
+</body>
+</html>
